@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Password Generator</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <body style="background-color:black;align-self: center;">
+    <div class="card" style="width: 20rem;margin-top: 5%;margin-left:auto;margin-right:auto;">
+  <div class="card-body">
+    <p class="login-card-description">Encrypt Now!! <span id="gen"></span></p>
+                  <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="***********">
+                  </div>
+                  <button class="btn btn-block btn-dark mb-4" onclick="get()">
+                  Get it Now</button>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    document.getElementById('gen').style.display='none'
+    function get(){
+      var x = document.getElementById('password').value
+      var x = x.toLowerCase()
+      var pass=""
+      var no=((x.length)*10)+4
+      for(var k=0;k<x.length;k++){
+          if (x[k]=='a'){
+              pass+='m'
+          }
+          else if (x[k]=='b'){
+              pass+='n'
+          }
+          else if (x[k]=='c'){
+              pass+='o'
+          }
+          else if (x[k]=='d'){
+              pass+='p'
+          }
+          else if (x[k]=='e'){
+              pass+='i'
+          }
+          else if (x[k]=='f'){
+              pass+='j'
+          }
+          else if (x[k]=='g'){
+              pass+='k'
+          }
+          else if (x[k]=='h'){
+              pass+='l'
+          }
+          else if (x[k]=='i'){
+              pass+='e'
+          }
+          else if (x[k]=='j'){
+              pass+='f'
+          }
+          else if (x[k]=='k'){
+              pass+='g'
+          }
+          else if (x[k]=='l'){
+              pass+='h'
+          }
+          else if (x[k]=='m'){
+              pass+='a'
+          }
+          else if (x[k]=='n'){
+              pass+='b'
+          }
+          else if (x[k]=='o'){
+              pass+='c'
+          }
+          else if (x[k]=='p'){
+              pass+='d'
+          }
+          else if (x[k]=='q'){
+              pass+='s'
+          }
+          else if (x[k]=='r'){
+              pass+='t'
+          }
+          else if (x[k]=='s'){
+              pass+='q'
+          }
+          else if (x[k]=='t'){
+              pass+='r'
+          }
+          else if (x[k]=='u'){
+              pass+='v'
+          }
+          else if (x[k]=='v'){
+              pass+='u'
+          }
+          else if (x[k]=='w'){
+              pass+='x'
+          }
+          else if (x[k]=='x'){
+              pass+='w'
+          }
+          else if (x[k]=='y'){
+              pass+='z'
+          }
+          else if (x[k]=='z'){
+              pass+='y'
+          }
+          else{
+            pass+=x[k]
+          }
+      }
+      document.getElementById('gen').innerHTML=('- '+'H'+pass+'$'+no)
+      document.getElementById('gen').style.display='inline-block'
+    }
+  </script>
+  </body>
+</html>
